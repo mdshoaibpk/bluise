@@ -9,6 +9,7 @@ export default async (context) => {
     }
   
     workbox.addEventListener('installed', (event) => {
+      console.log('i am being used')
       if (!event.isUpdate) {
         console.log('The PWA is on the latest version.');
         return;
