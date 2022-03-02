@@ -95,6 +95,9 @@ const nuxtConfig: Configuration = {
   },
 
   workbox: {
+    config: {
+      ':signature': Date.now(), // generate new sw.js for each build
+    },
     runtimeCaching: [
       {
         urlPattern: 'https://d33wubrfki0l68.cloudfront.net/.*',
